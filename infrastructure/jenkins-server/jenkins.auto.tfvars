@@ -1,0 +1,8 @@
+mykey = "xxxxxxxx"
+ami = "ami-0947d2ba12ee1ff75"
+region = "us-east-1"
+instance_type = "t2.micro"
+jenkins_server_secgr = "petclinic-jenkins-server-secgr"
+jenkins-server-tag = "Jenkins Server of Petclinic"
+jenkins-profile = "petclinic-jenkins-server-profile"
+jenkins-role = "petclinic-jenkins-server-role"
