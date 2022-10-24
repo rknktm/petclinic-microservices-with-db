@@ -91,7 +91,6 @@ resource "aws_security_group" "petclinic-kube-master-sg" {
     from_port = 6443
     to_port = 6443
     cidr_blocks = ["0.0.0.0/0"]
-    #security_groups = [aws_security_group.petclinic-mutual-sg.id]
   }
   ingress {
     protocol = "tcp"
@@ -121,13 +120,13 @@ resource "aws_security_group" "petclinic-kube-master-sg" {
     protocol = "tcp"
     from_port = 10257
     to_port = 10257
-    security_groups = [aws_security_group.petclinic-mutual-sg.id]
+    self = true
   }
   ingress {
     protocol = "tcp"
     from_port = 10259
     to_port = 10259
-    security_groups = [aws_security_group.petclinic-mutual-sg.id]
+    self = true
   }
   ingress {
     protocol = "tcp"
